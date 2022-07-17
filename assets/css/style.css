@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Home */
+
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 5fr 5fr 1fr;
+    grid-template-areas: 
+      "titulo"
+      "articulo1"
+      "articulo2"
+      "footer";
+}
+
+header{
+    background-color: rgb(32, 44, 57);
+        grid-area: titulo;
+}
+
+@font-face {
+    font-family: "Bebas";
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url(../fonts/Manrope-VariableFont_wght.ttf);
+}
+
+.header__titulo {
+    color:rgb(242, 212, 146);
+    font-size: 80px;
+    font-family: "Bebas";
+
+    text-align: center;
+    padding-top: 20px;
+    transition: all 1s;
+
+}
+.header__titulo:hover{
+    transform: scale(1.2,1.2);
+}
+
+.header__navbar {
+    grid-area: navbar;
+}
+.header__navbar ul {
+    padding: 2rem;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.header__navbar li {
+display: inline-block;
+
+}
+
+.header__navbar a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color:rgb(242, 212, 146);
+    font-family: "Manrope";
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: rgb(40, 56, 69);
+
+}
+
+.nav {
+    transition: all 2s;
+}
+.nav:hover {
+    background-image: url(../images/buenos_aires.jpeg);
+    transform: scale(1.1,1.1);
+}
+
+.articulo1 {
+    background-image: url(../images/buenos_aires.jpeg);
+    background-size: cover;
+    grid-area: articulo1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.articulo1__titulo {
+    text-align: center;
+    font-family: "Bebas";
+    font-size: 4rem;
+    color: rgb(242, 212, 146);
+
+
+}
+
+
+
+.articulo__descripcion {
+    font-family: "Manrope";
+    color:rgb(32, 44, 57);
+    font-size: 1rem;
+    background-color: rgb(242, 212, 146, 0.80);
+}
+
+.articulo2 {
+    background-image: url(../images/jujuy.jpeg);
+    background-size: cover;
+    padding: 60px;
+    grid-area: articulo2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articulo2__titulo {
+    text-align: center;
+    font-family: "Bebas";
+    font-size: 4rem;
+    color: rgb(40, 56, 69);
+}
+
+.footer {
+    border-top: solid 5px black;
+    background-color: rgb(184, 176, 141);
+
+    grid-area: footer;
+
+}
+
+.footer__copyright {
+    color: rgb(32, 44, 57);
+    font-family: "Manrope";
+    font-size: 1rem;
+    padding: 40px;
+
+}
+
+/* Galería */
+
+.grid_galeria{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "paris"
+    "seul"
+    "cape"
+    ;
+}
+
+
+.galeria__fondo {
+    background-image: linear-gradient(to left, rgb(125, 158, 201),rgb(108, 108, 169) );
+    background-size: cover;
+}
+
+.titulo_pagina {
+
+    text-align: left;
+    font-family: "Bebas";
+    font-size: 50px;
+    color: rgb(242, 212, 146);
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(40, 56, 69, 0.75);
+    grid-area: titulo_pagina;
+
+}
+
+.galeria__paris {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: paris;
+
+   
+}
+
+.galeria__seul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: seul;
+}
+
+.galeria__capetown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: cape;
+}
+
+
+
+
+.galeria__titulo--articulo {
+    display: inline;
+    font-family: "Manrope";
+    color: rgb(32, 44, 57);
+    font-size: 30px;
+    padding: 30px;
+    
+}
+
+
+/* Acerca de Mi*/
+
+.a_de_mi__imagen {
+    padding: 30px;
+}
+
+.a_de_mi__fondo {
+    background-image: url(../images/back2.jpeg);
+    background-size: cover;
+    z-index: -1;
+}
+.a_de_mi__biografia{
+    display: block;
+    width: 70%;
+    padding: 30px;
+    float:right;
+    background-color: rgb(242, 212, 146, 0.50);
+    position: relative;
+    bottom: 600px;
+    
+}
+.a_de_mi__biografia--titulo{
+    font-family: "Manrope";
+    font-size: 30px;
+    color: rgb(32, 44, 57);
+    
+}
+
+.a_de_mi__biografia--texto {
+    font-family: "Manrope";
+    font-size: 12px;
+    color: rgb(32, 44, 57);
+    
+}
+
+/* Contacto */
+
+.contacto__fondo {
+    background-image: linear-gradient(to top, rgb(58, 38, 90), rgb(135, 163, 189));
+    z-index: -1;
+}
+
+.form {
+    padding: 30px;
+    font-family: "Manrope";
+    color:rgb(242, 212, 146);
+
+}
+.form__fondo{
+    background-color: rgb(32, 44, 57, 0.60);
+}
+.form__titulo {
+    font-family: "Bebas";
+    font-size: 45px;
+    text-align: center;
+    color: rgb(242, 212, 146);
+    
+}
+.form__bullet{
+    padding: 20px;
+    font-size: 18px;
+}
+.form__pais{
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.form__textarea{
+    position: relative;
+    left: 30px;
+}
+
+/* Recursos */
+
+.recursos__fondo{
+    background-image: linear-gradient(to top, rgb(34, 78, 84), rgb(163, 201, 225));
+    background-size: cover;
+}
+
+.recursos__eventos{
+    display: block;
+    width: 30%;
+    text-align: center;
+    position: relative;
+    left: 590px;
+
+
+}
+.recursos__eventos--titulo{
+    font-family: "Bebas";
+    color:rgb(242, 212, 146);
+    font-size: 40px;
+}
+.recursos__eventos--tabla{
+    font-family: "Manrope";
+    font-size: 15px;
+    color:rgb(242, 212, 146);
+    padding-bottom: 40px;
+    padding-top: 20px;
+    position: relative;
+    left:90px;
+
+}
+
+.recursos__guia--titulo{
+    font-family: "Bebas";
+    color:rgb(242, 212, 146);
+    font-size: 80px;
+    text-align: center;
+    padding: 30px;
+}
+.recursos__guias{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 40px;
+}
+
+
+@media screen and (min-width: 768px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 4fr 1fr;
+    grid-template-areas: 
+    "titulo titulo"
+    "articulo1 articulo2"
+    "footer footer"
+    }
+
+    .header__titulo {
+        color:rgb(242, 212, 146);
+        font-size: 90px;
+        font-family: "Bebas";
+    
+        text-align: center;
+        padding-top: 20px;
+    
+    }
+    .header__navbar a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color:rgb(242, 212, 146);
+        font-family: "Manrope";
+        font-size: 20px;
+        font-weight: 1000;
+        padding: 10px;
+        background-color: rgb(40, 56, 69);
+    }
+    .header__navbar a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color:rgb(242, 212, 146);
+        font-family: "Manrope";
+        font-size: 18px;
+        font-weight: 1000;
+        padding: 2rem;
+        background-color: rgb(40, 56, 69);}
+
+
+        .grid_galeria{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            "paris seul cape"
+            ;
+        }
+}
+
+
+
+
+    
